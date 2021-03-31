@@ -1,10 +1,12 @@
-package com.br.projetoum;
+package com.br.sorteioprojeto;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void alterarTexto(View view){
-        TextView texto = findViewById(R.id.textView1);
-        texto.setText("Henrique Marrane");
+    public void sortearNumero(View view){
+        TextView texto = findViewById(R.id.textView2);
+        int numero = new Random().nextInt(11);
+        texto.setText("Número selecionado: " + numero);
     }
-
 }
